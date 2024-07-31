@@ -8,7 +8,6 @@ insert into employee values(7,'mohit','marine',45000);
 insert into employee values(1,'ram','cse',20000);
 select * from employee;
 
-
 create table dept(dept varchar(20), empid int);
 insert into dept values('cse',1);
 insert into dept values('mba',4);
