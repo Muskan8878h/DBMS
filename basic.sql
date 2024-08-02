@@ -8,5 +8,11 @@ ALTER TABLE students Add(address varchar(30));
 ALTER TABLE students MODIFY address int;
 ALTER TABLE students RENAME COLUMN  address TO city;
 ALTER TABLE students RENAME TO stud;
+
+ALTER TABLE stud MODIFY city varchar(20);
 SELECT * FROM  stud;
+desc stud;
+UPDATE stud SET city='Pune' WHERE rollNo=1;
+UPDATE stud SET city='Delhi' WHERE age=14;
+UPDATE stud SET city='Punjab' WHERE rollNo=3;
 ALTER TABLE stud ADD PRIMARY KEY (rollNo);
