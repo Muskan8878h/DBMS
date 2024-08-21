@@ -12,6 +12,7 @@ create table dept(dept varchar(20), empid int);
 insert into dept values('cse',1);
 insert into dept values('mba',4);
 insert into dept values('bba',7);
+insert into dept values('hm',10,100,20000);
 alter table dept add courseno int;
 update dept set courseno=10 where empid=7;
 update dept set courseno=6 where empid=4;
@@ -22,6 +23,16 @@ select * from employee where empid in(select empid from dept where dept='cse');
 select * from employee where empid not in(select empid from dept where dept='cse'); 
 select * from employee where empid in(select empid from dept where dept='cse');
 select * from dept;
+
+select * from  employee inner join dept on employee.dept=dept.dept;
+select employee.empid, employee.empname, dept.courseno from  employee inner join dept on employee.dept=dept.dept;
+select * from  employee left join dept on employee.dept=dept.dept;
+select * from  employee right join dept on employee.dept=dept.dept;
+
+select * from  employee left join dept on employee.dept=dept.dept where dept.empid is null;
+select * from  employee full join dept on employee.dept=dept.dept;
+
+
 
 
 
